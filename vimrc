@@ -33,7 +33,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins from github repos:
 
-" Override configs by directory 
+" Override configs by directory
 Plug 'arielrossanigo/dir-configs-override.vim'
 " Better file browser
 Plug 'scrooloose/nerdtree'
@@ -99,8 +99,8 @@ Plug 'mileszs/ack.vim'
 
 " Relative numbering of lines (0 is the current line)
 " (disabled by default because is very intrusive and can't be easily toggled
-" on/off. When the plugin is present, will always activate the relative 
-" numbering every time you go to normal mode. Author refuses to add a setting 
+" on/off. When the plugin is present, will always activate the relative
+" numbering every time you go to normal mode. Author refuses to add a setting
 " to avoid that)
 " Plug 'myusuf3/numbers.vim'
 
@@ -128,7 +128,7 @@ Plug 'pboettch/vim-highlight-cursor-words'
 Plug 'terryma/vim-multiple-cursors'
 " multiselect : Create multiple selections and operate
 Plug 'vim-scripts/multiselect'
-" genutils : General utility functions 
+" genutils : General utility functions
 Plug 'vim-scripts/genutils'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
@@ -184,8 +184,8 @@ set nu
 " tab navigation mappings
 map tn :tabn<CR>
 map tp :tabp<CR>
-map tm :tabm 
-map tt :tabnew 
+map tm :tabm
+map tt :tabnew
 map ts :tab split<CR>
 map <C-S-Right> :tabn<CR>
 imap <C-S-Right> <ESC>:tabn<CR>
@@ -214,15 +214,15 @@ set completeopt-=preview
 ca w!! w !sudo tee "%"
 
 " simple recursive grep
-nmap ,r :Ack 
+nmap ,r :Ack
 nmap ,wr :Ack <cword><CR>
 
 " use 256 colors when possible
 if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
 	"let &t_Co = 256
-    colorscheme delek 
+    colorscheme delek
 else
-    colorscheme fisa 
+    colorscheme fisa
 endif
 
 " colors for gvim
@@ -262,14 +262,14 @@ endif
 " Plugins settings and mappings
 " Edit them as you wish.
 
-" Tagbar ----------------------------- 
+" Tagbar -----------------------------
 
 " toggle tagbar display
 map <F4> :TagbarToggle<CR>
 " autofocus on tagbar open
 let g:tagbar_autofocus = 1
 
-" NERDTree ----------------------------- 
+" NERDTree -----------------------------
 
 " toggle nerdtree display
 map <F3> :NERDTreeToggle<CR>
@@ -348,7 +348,7 @@ nmap ,D :tab split<CR>:call jedi#goto()<CR>
 " NeoComplCache ------------------------------
 
 " most of them not documented because I'm not sure how they work
-" (docs aren't good, had to do a lot of trial and error to make 
+" (docs aren't good, had to do a lot of trial and error to make
 " it play nice)
 " let g:neocomplcache_enable_at_startup = 1
 " let g:neocomplcache_enable_ignore_case = 1
@@ -365,7 +365,7 @@ nmap ,D :tab split<CR>:call jedi#goto()<CR>
 " " complete with workds from any opened file
 " let g:neocomplcache_same_filetype_lists = {}
 " let g:neocomplcache_same_filetype_lists._ = '_'
-" 
+"
 " TabMan ------------------------------
 
 " mappings to toggle display, and to focus on it
@@ -411,7 +411,7 @@ nmap  -  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
 " Airline ------------------------------
-let g:airline_powerline_fonts = 1 
+let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -444,11 +444,11 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 " powerline symbols
 let g:airline_left_sep = ''
-let g:airline_left_alt_sep = '' 
+let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = '' 
+let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 
@@ -467,12 +467,12 @@ vnoremap <C-I> >gv
 
 set clipboard=unnamedplus
 
-vmap y "+y 
-vmap d "+d 
-vmap p "+p 
+vmap y "+y
+vmap d "+d
+vmap p "+p
 vmap P "+P
-nmap p "+p 
-nmap P "+P 
+nmap p "+p
+nmap P "+P
 
 " Backspace adjust
 set backspace=indent,eol,start
@@ -487,7 +487,7 @@ set relativenumber
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
-" Save File 
+" Save File
 nnoremap <silent> <C-S> :update<cr>
 inoremap <silent> <C-S> <c-o>:update<cr>
 vnoremap <silent> <C-S> <c-c>:update<cr>
@@ -518,7 +518,7 @@ function CommentOrNot()
                 :noh
                 :cal cursor(m, n-2)
             else
-                :s/^/# / 
+                :s/^/# /
                 :noh
                 :cal cursor(m, n+2)
             endif
@@ -529,7 +529,7 @@ function CommentOrNot()
                 :noh
                 :cal cursor(m, n-2)
             else
-                :s/^/" / 
+                :s/^/" /
                 :noh
                 :cal cursor(m, n+2)
             endif
@@ -643,4 +643,3 @@ nnoremap <C-c> :call multiple_cursors#quit()<CR>
 
 " let g:HiCursorWords_style='term=reverse cterm=reverse gui=reverse'
 let g:HiCursorWords_linkStyle='VisualNOS'
-
