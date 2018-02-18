@@ -1,5 +1,5 @@
 # .vimrc file
-This is a code for Vim. Credits go to [fisa-vim-config](http://fisadev.github.io/fisa-vim-config/). I've merely created some simple functions, such as comment/uncomment, excute python, etc. I comment some of the code, and you can uncomment if you like.
+This is a code for Vim. Credits go to [fisa-vim-config](http://fisadev.github.io/fisa-vim-config/). I've merely added some simple functions, such as comment/uncomment, excute python, etc. I commented some of the code, and you can uncomment it if you like.
 
 ## System
 
